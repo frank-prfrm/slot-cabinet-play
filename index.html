@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!--
+      The web build's top page (docs/web-play-plan.md). It holds the credits
+      and the maths, and the menu plays in the frame that fills it; the player's game plays
+      in a window of its own.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; frame-src 'self'; connect-src 'self'; img-src 'self'; media-src 'self'; manifest-src 'self'; worker-src 'self'"
+    />
+    <title>Slot Cabinet</title>
+    <!-- Installed as an app (sw.ts): from the browser's menu, or on an iPhone Share, then Add to Home Screen. -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Slots" />
+    <link rel="stylesheet" href="shell.css" />
+  </head>
+  <body>
+    <iframe id="screen" title="Slot Cabinet" allow="autoplay; fullscreen"></iframe>
+    <div id="elsewhere" hidden>
+      <p id="elsewhere-text"></p>
+      <button id="elsewhere-show" type="button">Show the game</button>
+    </div>
+    <p id="notice" hidden></p>
+    <!-- Shown by shell.css alone, on a phone turned on its side. -->
+    <p id="upright">Turn your phone upright to play.</p>
+    <script type="module" src="shell.js"></script>
+  </body>
+</html>

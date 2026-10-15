@@ -1,0 +1,92 @@
+/* The tester page (help.html): the cabinet's gold on black, readable on a phone. */
+
+:root {
+  color-scheme: dark;
+  --gold: #f2d27a;
+  --ink: #efe6d2;
+  --dim: #b5a98f;
+  --rule: #3a2e18;
+}
+
+html {
+  background: #0b0710;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--ink);
+  font: 1.05rem/1.55 system-ui, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header img {
+  border-radius: 22%;
+}
+
+h1 {
+  margin: 0.5rem 0 0.25rem;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 2rem 0 0.5rem;
+  color: var(--gold);
+  font-size: 1.4rem;
+}
+
+h3 {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+header p,
+td:last-child {
+  color: var(--dim);
+}
+
+ol {
+  padding-left: 1.4rem;
+}
+
+.play {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 2.6rem;
+  border-radius: 0.6rem;
+  color: #1a1206;
+  background: var(--gold);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th,
+td {
+  padding: 0.45rem 0.4rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  color: var(--gold);
+  font-weight: 600;
+}

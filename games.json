@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "games": [
+    {
+      "path": "games/exports/dino-run/",
+      "folder": "exports"
+    },
+    {
+      "path": "games/exports/dragons-hoard/",
+      "folder": "exports"
+    },
+    {
+      "path": "games/exports/midnight-manor/",
+      "folder": "exports"
+    },
+    {
+      "path": "games/exports-video-spin/dragons-hoard/",
+      "folder": "exports-video-spin"
+    }
+  ]
+}

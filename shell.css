@@ -1,0 +1,103 @@
+/* The web build's top page: a frame that fills the window, and a line for a
+   failure to load. The game draws its own letterbox inside the frame. */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#screen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#notice {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 2rem;
+  color: #f2d27a;
+  font: 1.2rem/1.5 system-ui, sans-serif;
+  background: #000;
+}
+
+#screen[hidden] {
+  display: none;
+}
+
+/* This tab while the player's game is in its own window. */
+#elsewhere {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #f2d27a;
+  font: 1.2rem/1.5 system-ui, sans-serif;
+}
+
+#elsewhere[hidden] {
+  display: none;
+}
+
+#elsewhere button {
+  font: inherit;
+  color: #1a1206;
+  background: #f2d27a;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+}
+
+/*
+ * A phone (shell.ts sets body.touch). The frame keeps clear of the notch and
+ * the home bar, which a page drawn under them (viewport-fit=cover) must do
+ * for itself; a framed page cannot read those insets, so this one does.
+ */
+body.touch {
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+body.touch #screen {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  right: env(safe-area-inset-right, 0px);
+  bottom: env(safe-area-inset-bottom, 0px);
+  left: env(safe-area-inset-left, 0px);
+  /* An iframe is a replaced element: auto would leave it 300x150, not stretched. */
+  width: calc(100% - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  height: calc(100% - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+}
+
+#upright {
+  display: none;
+}
+
+/* A phone on its side: the game is portrait, so say so rather than shrink it. */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 600px) {
+  #upright {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: #f2d27a;
+    font: 1.3rem/1.5 system-ui, sans-serif;
+    background: #000;
+  }
+}

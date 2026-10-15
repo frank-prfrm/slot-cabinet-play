@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--
+      The layer stack is the decision in ADR-0017, written as markup.
+
+        #backdrop   a <video> or <img> the compositor owns. Never sampled by
+                    WebGL: pulling it through texImage2D measured 8x the GPU
+                    time at p95 for identical output.
+        #stage      the transparent WebGL2 canvas. The game.
+        #ui         DOM text and controls, positioned in design pixels and
+                    scaled as one block, so layout code never sees the window.
+        #perf       the frame-time HUD, in device pixels because it is about
+                    the machine rather than about the game.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'"
+    />
+    <title>Slot Cabinet Engine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- On a touch screen, the background blurred across the bars beside the game (the web build). -->
+    <div id="backdrop-fill"></div>
+    <div id="backdrop"></div>
+    <canvas id="stage"></canvas>
+
+    <div id="ui" hidden>
+      <header class="band header">
+        <h1 id="title"></h1>
+        <p id="banner" class="banner" hidden></p>
+      </header>
+
+      <!-- The top awards over the reels, only when the game declares a callout band (ADR-0041). -->
+      <section id="callout" class="callout" hidden></section>
+
+      <!-- Prize meters in a jackpots band: labels and unlit dashes, never an amount (ADR-0042). -->
+      <section id="prize-meters" class="prize-meters" hidden></section>
+
+      <!-- The readout bar is decoration; the readouts sit on it at their own solved rect. -->
+      <div class="meter"></div>
+      <section class="readouts">
+        <div class="readout"><span class="label">Credits</span><span id="credits" class="value"></span></div>
+        <div class="readout"><span class="label">Bet</span><span id="bet" class="value"></span></div>
+        <div class="readout win"><span class="label">Win</span><span id="win" class="value"></span></div>
+      </section>
+
+      <p id="message" class="message"></p>
+
+      <!-- Attract mode (ADR-0064): lights chasing round the reel panel. -->
+      <svg id="marquee" class="marquee" hidden></svg>
+
+      <!-- Overlays (ADR-0042): after the bands, so they draw over every one of them. -->
+      <div id="bet-chip" class="chip" hidden><span class="chip-label">BET</span><span class="chip-figure"></span></div>
+      <div id="denomination-chip" class="chip" hidden><span class="chip-label">CREDIT</span><span class="chip-figure"></span></div>
+      <div id="badge" class="badge" hidden>
+        <span class="badge-pic"><img class="badge-art" alt="" /><span class="badge-count"></span></span>
+        <span class="badge-text"><span class="badge-figure"></span><span class="badge-label"></span></span>
+      </div>
+
+      <!-- Attract's title card (ADR-0066), over the whole screen, game and
+           overlays included; then the call to play over the reels, which
+           stays on top of it. Words, not a control. -->
+      <img id="attract-card" class="attract-card" alt="" hidden />
+      <div id="attract-call" class="attract-call" hidden><span>PRESS ANY BUTTON</span></div>
+
+      <!-- Nothing on the glass is pressed (ADR-0039, ADR-0042): the cabinet's
+           buttons and keys do it all, and the line along the readout bar says
+           which. It says whether sound is on, too. -->
+
+      <!-- The Pays screen (ADR-0031). Last, so it covers every control; any press closes it. -->
+      <section id="pays" class="pays" hidden>
+        <div class="pays-content"></div>
+      </section>
+
+      <!-- The operator screen (ADR-0047). Held key, not on the key line: this
+           is the cabinet's settings, not the player's. -->
+      <section id="operator" class="operator" hidden>
+        <div class="operator-content"></div>
+      </section>
+
+      <!-- The L list of saved games (ADR-0060). Keys only: arrows, Space, any other to go back. -->
+      <section id="saves" class="saves" hidden>
+        <div class="saves-content"></div>
+      </section>
+
+      <!-- The test panel (held T): fire each event the game can show, one at a
+           time. Slides up from the bottom; test rounds move no credits. -->
+      <section id="test-panel" class="test-panel" hidden>
+        <div class="test-content"></div>
+      </section>
+    </div>
+
+    <!-- The web build on a touch screen only: the keys as buttons, under the game (shared/touch.ts). -->
+    <nav id="touch-bar" class="touch-bar" hidden></nav>
+
+    <pre id="perf"></pre>
+    <pre id="fatal" hidden></pre>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

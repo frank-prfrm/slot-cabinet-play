@@ -1,0 +1,1041 @@
+{
+  "schemaVersion": "1.9.0",
+  "gameId": "dragons-hoard",
+  "metadata": {
+    "title": "Dragon's Hoard",
+    "version": "0.1.0",
+    "targetRtp": 0.96,
+    "volatility": "medium",
+    "createdUtc": "2026-09-21T04:16:49Z"
+  },
+  "display": {
+    "canvas": {
+      "width": 2160,
+      "height": 3840
+    },
+    "orientation": "portrait",
+    "backgroundColor": "#141824",
+    "safeAreaInsets": {
+      "top": 96,
+      "right": 48,
+      "bottom": 160,
+      "left": 48
+    }
+  },
+  "symbols": [
+    {
+      "id": "beholder",
+      "name": "Beholder",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/beholder.webp"
+      }
+    },
+    {
+      "id": "lich",
+      "name": "Lich",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/lich.webp"
+      }
+    },
+    {
+      "id": "wizard",
+      "name": "Wizard",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/wizard.webp"
+      }
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/rogue.webp"
+      }
+    },
+    {
+      "id": "potion",
+      "name": "Potion",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/potion.webp"
+      }
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon",
+      "kind": "wild",
+      "art": {
+        "static": "assets/symbols/dragon.webp",
+        "winAnimation": {
+          "image": "assets/symbols/dragon-win-2.webp",
+          "frameWidth": 256,
+          "frameHeight": 256,
+          "frameCount": 12,
+          "columns": 4,
+          "fps": 12
+        }
+      },
+      "wild": {
+        "substitutesFor": "all_standard",
+        "multiplier": 1,
+        "paysOwnCombination": true
+      }
+    },
+    {
+      "id": "d20",
+      "name": "D20",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/d20.webp"
+      },
+      "scatter": {
+        "paysAnywhere": true,
+        "payoutBasis": "total_bet",
+        "maxPerReel": 1
+      }
+    },
+    {
+      "id": "coin",
+      "name": "Dragon Coin",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/coin.webp"
+      },
+      "scatter": {
+        "paysAnywhere": false,
+        "maxPerReel": 1
+      }
+    }
+  ],
+  "grid": {
+    "reelCount": 5,
+    "rows": 3
+  },
+  "reelSets": {
+    "base": [
+      [
+        "beholder",
+        "rogue",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "potion",
+        "beholder",
+        "wizard",
+        "lich",
+        "rogue",
+        "potion",
+        "wizard",
+        "beholder",
+        "coin",
+        "dragon",
+        "rogue",
+        "lich",
+        "potion",
+        "d20",
+        "wizard",
+        "rogue",
+        "potion",
+        "beholder",
+        "lich",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "beholder",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "potion"
+      ],
+      [
+        "lich",
+        "potion",
+        "beholder",
+        "rogue",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "dragon",
+        "rogue",
+        "lich",
+        "coin",
+        "potion",
+        "wizard",
+        "beholder",
+        "rogue",
+        "lich",
+        "potion",
+        "wizard",
+        "rogue",
+        "lich",
+        "beholder",
+        "d20",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "beholder",
+        "potion",
+        "dragon",
+        "rogue",
+        "wizard"
+      ],
+      [
+        "wizard",
+        "lich",
+        "potion",
+        "dragon",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "potion",
+        "wizard",
+        "beholder",
+        "rogue",
+        "coin",
+        "lich",
+        "potion",
+        "dragon",
+        "wizard",
+        "rogue",
+        "beholder",
+        "lich",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "beholder",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "d20",
+        "potion",
+        "beholder",
+        "rogue"
+      ],
+      [
+        "rogue",
+        "wizard",
+        "d20",
+        "lich",
+        "potion",
+        "rogue",
+        "beholder",
+        "wizard",
+        "dragon",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "potion",
+        "wizard",
+        "beholder",
+        "coin",
+        "rogue",
+        "lich",
+        "d20",
+        "potion",
+        "wizard",
+        "rogue",
+        "beholder",
+        "lich",
+        "dragon",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "beholder",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "potion",
+        "beholder"
+      ],
+      [
+        "potion",
+        "beholder",
+        "rogue",
+        "wizard",
+        "potion",
+        "lich",
+        "rogue",
+        "beholder",
+        "d20",
+        "potion",
+        "wizard",
+        "lich",
+        "rogue",
+        "potion",
+        "beholder",
+        "wizard",
+        "rogue",
+        "lich",
+        "potion",
+        "wizard",
+        "coin",
+        "beholder",
+        "rogue",
+        "potion",
+        "lich",
+        "wizard",
+        "rogue",
+        "potion",
+        "beholder",
+        "lich",
+        "dragon",
+        "d20",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich",
+        "beholder",
+        "potion",
+        "rogue",
+        "wizard",
+        "lich"
+      ]
+    ]
+  },
+  "winMode": {
+    "type": "lines",
+    "direction": "left_to_right"
+  },
+  "paylines": [
+    {
+      "id": "line_01",
+      "name": "Middle",
+      "rows": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "color": "#ff2f92"
+    },
+    {
+      "id": "line_02",
+      "name": "Top",
+      "rows": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "color": "#2fd0ff"
+    },
+    {
+      "id": "line_03",
+      "name": "Bottom",
+      "rows": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "color": "#7cff2f"
+    },
+    {
+      "id": "line_04",
+      "name": "V",
+      "rows": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "color": "#ffb62f"
+    },
+    {
+      "id": "line_05",
+      "name": "Caret",
+      "rows": [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "color": "#b62fff"
+    },
+    {
+      "id": "line_06",
+      "name": "Descend",
+      "rows": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "color": "#ff5c2f"
+    },
+    {
+      "id": "line_07",
+      "name": "Ascend",
+      "rows": [
+        2,
+        2,
+        1,
+        0,
+        0
+      ],
+      "color": "#2fffc4"
+    },
+    {
+      "id": "line_08",
+      "name": "Dip",
+      "rows": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "color": "#ff2f2f"
+    },
+    {
+      "id": "line_09",
+      "name": "Rise",
+      "rows": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "color": "#2f6bff"
+    },
+    {
+      "id": "line_10",
+      "name": "Arch Top",
+      "rows": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "color": "#c9ff2f"
+    },
+    {
+      "id": "line_11",
+      "name": "Arch Low",
+      "rows": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "color": "#ff2fd0"
+    },
+    {
+      "id": "line_12",
+      "name": "Zig",
+      "rows": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "color": "#2fffe9"
+    },
+    {
+      "id": "line_13",
+      "name": "Zag",
+      "rows": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "color": "#ff8f2f"
+    },
+    {
+      "id": "line_14",
+      "name": "Notch Top",
+      "rows": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "color": "#8f2fff"
+    },
+    {
+      "id": "line_15",
+      "name": "Notch Low",
+      "rows": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "color": "#2fff6b"
+    },
+    {
+      "id": "line_16",
+      "name": "Sag",
+      "rows": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "color": "#ffd82f"
+    },
+    {
+      "id": "line_17",
+      "name": "Crest",
+      "rows": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "color": "#2f9dff"
+    },
+    {
+      "id": "line_18",
+      "name": "Wave Top",
+      "rows": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "color": "#ff2f6b"
+    },
+    {
+      "id": "line_19",
+      "name": "Wave Low",
+      "rows": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "color": "#6bff2f"
+    },
+    {
+      "id": "line_20",
+      "name": "Split",
+      "rows": [
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "color": "#d0d0ff"
+    }
+  ],
+  "paytable": {
+    "payoutBasis": "bet_per_line",
+    "minMatch": 3,
+    "entries": [
+      {
+        "symbolId": "dragon",
+        "payouts": {
+          "3": 34,
+          "4": 127,
+          "5": 624
+        }
+      },
+      {
+        "symbolId": "beholder",
+        "payouts": {
+          "3": 22,
+          "4": 72,
+          "5": 331
+        }
+      },
+      {
+        "symbolId": "lich",
+        "payouts": {
+          "4": 49,
+          "5": 163
+        }
+      },
+      {
+        "symbolId": "wizard",
+        "payouts": {
+          "4": 25,
+          "5": 101
+        }
+      },
+      {
+        "symbolId": "rogue",
+        "payouts": {
+          "4": 12,
+          "5": 48
+        }
+      },
+      {
+        "symbolId": "potion",
+        "payouts": {
+          "4": 10,
+          "5": 30
+        }
+      },
+      {
+        "symbolId": "d20",
+        "payouts": {
+          "3": 3.2,
+          "4": 13.3,
+          "5": 66.45
+        }
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "free_spins",
+      "type": "free_spins",
+      "trigger": {
+        "symbolId": "d20",
+        "awards": {
+          "3": 9
+        }
+      },
+      "winMultiplier": 2
+    },
+    {
+      "id": "dragon_expands",
+      "type": "expanding_symbol",
+      "symbolId": "dragon",
+      "reels": [
+        1,
+        2,
+        3
+      ],
+      "appliesIn": [
+        "free_spins"
+      ]
+    },
+    {
+      "id": "jackpots",
+      "type": "jackpot",
+      "symbolId": "coin",
+      "tiers": [
+        {
+          "id": "grand",
+          "label": "GRAND",
+          "count": 5,
+          "multiplier": 1000
+        },
+        {
+          "id": "major",
+          "label": "MAJOR",
+          "count": 4,
+          "multiplier": 100
+        }
+      ]
+    }
+  ],
+  "winTiers": [
+    {
+      "id": "no_tier",
+      "label": "Win",
+      "minTotalBetMultiplier": 0
+    },
+    {
+      "id": "small",
+      "label": "Nice Win",
+      "minTotalBetMultiplier": 2,
+      "sound": "assets/audio/win_small.mp3"
+    },
+    {
+      "id": "big",
+      "label": "Big Win",
+      "minTotalBetMultiplier": 15,
+      "sound": "assets/audio/win_big.mp3"
+    },
+    {
+      "id": "mega",
+      "label": "Mega Win",
+      "minTotalBetMultiplier": 50,
+      "sound": "assets/audio/win_mega.mp3"
+    }
+  ],
+  "presentation": {
+    "background": {
+      "image": "assets/backgrounds/dragon-hoard-v3-4k.webp"
+    },
+    "screen": [
+      {
+        "role": "jackpots",
+        "rect": {
+          "x": 172,
+          "y": 690,
+          "width": 1816,
+          "height": 430
+        }
+      },
+      {
+        "role": "logo",
+        "rect": {
+          "x": 415,
+          "y": 96,
+          "width": 1330,
+          "height": 561
+        },
+        "image": "assets/backgrounds/dragons-hoard-logo.webp"
+      },
+      {
+        "role": "callout",
+        "rect": {
+          "x": 151,
+          "y": 1858,
+          "width": 1858,
+          "height": 143
+        }
+      },
+      {
+        "role": "reels",
+        "rect": {
+          "x": 48,
+          "y": 2055,
+          "width": 2064,
+          "height": 1248
+        }
+      }
+    ],
+    "overlays": [
+      {
+        "role": "bet_chip",
+        "rect": {
+          "x": 199,
+          "y": 957,
+          "width": 345,
+          "height": 163
+        }
+      },
+      {
+        "role": "denomination_chip",
+        "rect": {
+          "x": 1616,
+          "y": 957,
+          "width": 345,
+          "height": 163
+        }
+      },
+      {
+        "role": "free_spins_badge",
+        "rect": {
+          "x": 1513,
+          "y": 1578,
+          "width": 537,
+          "height": 226
+        }
+      }
+    ],
+    "reelSpin": {
+      "mode": "symbol_scroll",
+      "spinDurationMs": 900,
+      "reelStopStaggerMs": 350
+    },
+    "attract": {
+      "enabled": true,
+      "titleCard": "assets/attract/title-card.webp",
+      "video": "assets/attract/dragons-hoard-attract.mp4"
+    },
+    "reelLights": {
+      "enabled": true
+    }
+  },
+  "bet": {
+    "currency": "USD",
+    "denominationsMinorUnits": [
+      1,
+      5,
+      10,
+      25,
+      100
+    ],
+    "defaultDenominationMinorUnits": 1,
+    "betLevels": [
+      {
+        "id": "level_1",
+        "totalBetCredits": 20,
+        "label": "1x"
+      },
+      {
+        "id": "level_2",
+        "totalBetCredits": 40,
+        "label": "2x"
+      },
+      {
+        "id": "level_3",
+        "totalBetCredits": 100,
+        "label": "5x"
+      },
+      {
+        "id": "level_4",
+        "totalBetCredits": 200,
+        "label": "10x"
+      }
+    ],
+    "defaultBetLevelId": "level_1",
+    "minTotalBetCredits": 20,
+    "maxTotalBetCredits": 200
+  },
+  "audio": {
+    "spin": "assets/audio/spin-2.mp3",
+    "reelStop": "assets/audio/reel_stop.mp3",
+    "buttonPress": "assets/audio/button_press.mp3",
+    "bonusTrigger": "assets/audio/bonus_trigger.mp3",
+    "idleLoop": "assets/audio/idle_loop.mp3",
+    "bonusLoop": "assets/audio/bonus_loop.mp3"
+  },
+  "rng": {
+    "model": "independent_uniform_per_reel",
+    "stopIndexSemantics": "top_row",
+    "wrap": true
+  },
+  "feels": {
+    "defaultFeelId": "casino",
+    "options": [
+      {
+        "id": "steady",
+        "name": "Wins often",
+        "entries": [
+          {
+            "symbolId": "dragon",
+            "payouts": {
+              "3": 33,
+              "4": 123,
+              "5": 603
+            }
+          },
+          {
+            "symbolId": "beholder",
+            "payouts": {
+              "3": 22,
+              "4": 69,
+              "5": 321
+            }
+          },
+          {
+            "symbolId": "lich",
+            "payouts": {
+              "3": 1,
+              "4": 47,
+              "5": 157
+            }
+          },
+          {
+            "symbolId": "wizard",
+            "payouts": {
+              "3": 1,
+              "4": 24,
+              "5": 97
+            }
+          },
+          {
+            "symbolId": "rogue",
+            "payouts": {
+              "3": 1,
+              "4": 11,
+              "5": 47
+            }
+          },
+          {
+            "symbolId": "potion",
+            "payouts": {
+              "4": 9,
+              "5": 29
+            }
+          },
+          {
+            "symbolId": "d20",
+            "payouts": {
+              "3": 3.1,
+              "4": 12.8,
+              "5": 64.2
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 500000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.5594,
+          "rtp": 0.9603
+        }
+      },
+      {
+        "id": "casino",
+        "name": "Like a casino",
+        "entries": [
+          {
+            "symbolId": "dragon",
+            "payouts": {
+              "3": 34,
+              "4": 127,
+              "5": 624
+            }
+          },
+          {
+            "symbolId": "beholder",
+            "payouts": {
+              "3": 22,
+              "4": 72,
+              "5": 331
+            }
+          },
+          {
+            "symbolId": "lich",
+            "payouts": {
+              "4": 49,
+              "5": 163
+            }
+          },
+          {
+            "symbolId": "wizard",
+            "payouts": {
+              "4": 25,
+              "5": 101
+            }
+          },
+          {
+            "symbolId": "rogue",
+            "payouts": {
+              "4": 12,
+              "5": 48
+            }
+          },
+          {
+            "symbolId": "potion",
+            "payouts": {
+              "4": 10,
+              "5": 30
+            }
+          },
+          {
+            "symbolId": "d20",
+            "payouts": {
+              "3": 3.2,
+              "4": 13.3,
+              "5": 66.45
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 500000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.2985,
+          "rtp": 0.9602
+        }
+      },
+      {
+        "id": "rare",
+        "name": "Rare and big",
+        "entries": [
+          {
+            "symbolId": "dragon",
+            "payouts": {
+              "3": 40,
+              "4": 152,
+              "5": 749
+            }
+          },
+          {
+            "symbolId": "beholder",
+            "payouts": {
+              "4": 86,
+              "5": 399
+            }
+          },
+          {
+            "symbolId": "lich",
+            "payouts": {
+              "4": 58,
+              "5": 196
+            }
+          },
+          {
+            "symbolId": "wizard",
+            "payouts": {
+              "4": 30,
+              "5": 121
+            }
+          },
+          {
+            "symbolId": "rogue",
+            "payouts": {
+              "4": 15,
+              "5": 58
+            }
+          },
+          {
+            "symbolId": "potion",
+            "payouts": {
+              "4": 12,
+              "5": 37
+            }
+          },
+          {
+            "symbolId": "d20",
+            "payouts": {
+              "3": 3.85,
+              "4": 15.95,
+              "5": 79.8
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 500000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.2222,
+          "rtp": 0.9603
+        }
+      }
+    ]
+  }
+}

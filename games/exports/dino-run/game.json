@@ -1,0 +1,907 @@
+{
+  "schemaVersion": "1.9.0",
+  "gameId": "dino-run",
+  "metadata": {
+    "title": "Dino Run",
+    "version": "0.1.0",
+    "author": "Frank Pizzuta",
+    "description": "A prehistoric dash across five reels — chase down T-Rex, Triceratops, Stegosaurus, Raptor and Pterodactyl symbols, with an amber fossil wild and a volcano scatter that erupts into free spins.",
+    "targetRtp": 0.96,
+    "volatility": "high",
+    "createdUtc": "2026-09-16T14:58:03Z",
+    "tags": [
+      "dinosaurs",
+      "prehistoric",
+      "adventure"
+    ]
+  },
+  "display": {
+    "canvas": {
+      "width": 2160,
+      "height": 3840
+    },
+    "orientation": "portrait",
+    "backgroundColor": "#141824",
+    "safeAreaInsets": {
+      "top": 96,
+      "right": 48,
+      "bottom": 160,
+      "left": 48
+    }
+  },
+  "symbols": [
+    {
+      "id": "trex",
+      "name": "T-Rex",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/trex.webp"
+      },
+      "sounds": {
+        "win": "assets/sounds/trex_roar.mp3"
+      }
+    },
+    {
+      "id": "triceratops",
+      "name": "Triceratops",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/triceratops.webp"
+      }
+    },
+    {
+      "id": "stegosaurus",
+      "name": "Stegosaurus",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/stegosaurus.webp"
+      }
+    },
+    {
+      "id": "raptor",
+      "name": "Raptor",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/raptor.webp"
+      }
+    },
+    {
+      "id": "pterodactyl",
+      "name": "Pterodactyl",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/pterodactyl.webp"
+      }
+    },
+    {
+      "id": "amber-fossil",
+      "name": "Amber Fossil",
+      "kind": "wild",
+      "art": {
+        "static": "assets/symbols/amber-fossil.webp"
+      },
+      "wild": {
+        "substitutesFor": "all_standard",
+        "multiplier": 1,
+        "paysOwnCombination": true
+      }
+    },
+    {
+      "id": "volcano",
+      "name": "Volcano",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/volcano.webp"
+      },
+      "scatter": {
+        "paysAnywhere": true,
+        "payoutBasis": "total_bet",
+        "maxPerReel": 1
+      }
+    },
+    {
+      "id": "coin",
+      "name": "Coin",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/coin.webp"
+      },
+      "scatter": {}
+    }
+  ],
+  "grid": {
+    "reelCount": 5,
+    "rows": 3
+  },
+  "reelSets": {
+    "base": [
+      [
+        "stegosaurus",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "trex",
+        "stegosaurus",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "pterodactyl",
+        "stegosaurus",
+        "triceratops",
+        "raptor",
+        "pterodactyl",
+        "stegosaurus",
+        "triceratops",
+        "trex",
+        "amber-fossil",
+        "coin",
+        "stegosaurus",
+        "raptor",
+        "triceratops",
+        "pterodactyl",
+        "volcano",
+        "stegosaurus",
+        "raptor",
+        "trex",
+        "triceratops",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "trex",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl"
+      ],
+      [
+        "triceratops",
+        "stegosaurus",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "trex",
+        "stegosaurus",
+        "volcano",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "trex",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "amber-fossil",
+        "stegosaurus",
+        "raptor",
+        "triceratops",
+        "coin",
+        "pterodactyl",
+        "stegosaurus",
+        "trex",
+        "raptor",
+        "triceratops",
+        "pterodactyl",
+        "stegosaurus",
+        "raptor",
+        "triceratops",
+        "volcano",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "trex",
+        "pterodactyl",
+        "amber-fossil",
+        "raptor",
+        "stegosaurus"
+      ],
+      [
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "amber-fossil",
+        "stegosaurus",
+        "raptor",
+        "triceratops",
+        "trex",
+        "stegosaurus",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "raptor",
+        "volcano",
+        "pterodactyl",
+        "stegosaurus",
+        "trex",
+        "coin",
+        "raptor",
+        "triceratops",
+        "pterodactyl",
+        "amber-fossil",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "trex",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "volcano",
+        "pterodactyl",
+        "trex",
+        "raptor"
+      ],
+      [
+        "raptor",
+        "stegosaurus",
+        "volcano",
+        "triceratops",
+        "pterodactyl",
+        "stegosaurus",
+        "raptor",
+        "trex",
+        "triceratops",
+        "stegosaurus",
+        "amber-fossil",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "stegosaurus",
+        "trex",
+        "coin",
+        "raptor",
+        "triceratops",
+        "volcano",
+        "pterodactyl",
+        "stegosaurus",
+        "raptor",
+        "trex",
+        "triceratops",
+        "amber-fossil",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "pterodactyl",
+        "trex"
+      ],
+      [
+        "stegosaurus",
+        "pterodactyl",
+        "triceratops",
+        "raptor",
+        "trex",
+        "triceratops",
+        "volcano",
+        "pterodactyl",
+        "stegosaurus",
+        "triceratops",
+        "raptor",
+        "pterodactyl",
+        "trex",
+        "stegosaurus",
+        "raptor",
+        "triceratops",
+        "pterodactyl",
+        "stegosaurus",
+        "raptor",
+        "coin",
+        "pterodactyl",
+        "triceratops",
+        "stegosaurus",
+        "raptor",
+        "pterodactyl",
+        "trex",
+        "triceratops",
+        "stegosaurus",
+        "amber-fossil",
+        "volcano",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops",
+        "trex",
+        "pterodactyl",
+        "raptor",
+        "stegosaurus",
+        "triceratops"
+      ]
+    ]
+  },
+  "winMode": {
+    "type": "lines",
+    "direction": "left_to_right"
+  },
+  "paylines": [
+    {
+      "id": "line_01",
+      "name": "Middle",
+      "rows": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "color": "#ff2f92"
+    },
+    {
+      "id": "line_02",
+      "name": "Top",
+      "rows": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "color": "#2fd0ff"
+    },
+    {
+      "id": "line_03",
+      "name": "Bottom",
+      "rows": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "color": "#7cff2f"
+    },
+    {
+      "id": "line_04",
+      "name": "V",
+      "rows": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "color": "#ffb62f"
+    },
+    {
+      "id": "line_05",
+      "name": "Caret",
+      "rows": [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "color": "#b62fff"
+    },
+    {
+      "id": "line_06",
+      "name": "Descend",
+      "rows": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "color": "#ff5c2f"
+    },
+    {
+      "id": "line_07",
+      "name": "Ascend",
+      "rows": [
+        2,
+        2,
+        1,
+        0,
+        0
+      ],
+      "color": "#2fffc4"
+    },
+    {
+      "id": "line_08",
+      "name": "Dip",
+      "rows": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "color": "#ff2f2f"
+    },
+    {
+      "id": "line_09",
+      "name": "Rise",
+      "rows": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "color": "#2f6bff"
+    },
+    {
+      "id": "line_10",
+      "name": "Arch Top",
+      "rows": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "color": "#c9ff2f"
+    }
+  ],
+  "paytable": {
+    "payoutBasis": "bet_per_line",
+    "minMatch": 3,
+    "entries": [
+      {
+        "symbolId": "amber-fossil",
+        "payouts": {
+          "3": 13.5,
+          "4": 124,
+          "5": 1246
+        }
+      },
+      {
+        "symbolId": "trex",
+        "payouts": {
+          "3": 10,
+          "4": 249,
+          "5": 3118.5
+        }
+      },
+      {
+        "symbolId": "triceratops",
+        "payouts": {
+          "4": 24,
+          "5": 79
+        }
+      },
+      {
+        "symbolId": "stegosaurus",
+        "payouts": {
+          "4": 12,
+          "5": 46.5
+        }
+      },
+      {
+        "symbolId": "raptor",
+        "payouts": {
+          "3": 0.5,
+          "4": 7,
+          "5": 34.5
+        }
+      },
+      {
+        "symbolId": "pterodactyl",
+        "payouts": {
+          "3": 1.5,
+          "4": 3,
+          "5": 25.5
+        }
+      },
+      {
+        "symbolId": "volcano",
+        "payouts": {
+          "3": 1.15,
+          "4": 7.45,
+          "5": 35
+        }
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "free_spins",
+      "type": "free_spins",
+      "trigger": {
+        "symbolId": "volcano",
+        "awards": {
+          "3": 10
+        }
+      },
+      "winMultiplier": 2
+    },
+    {
+      "id": "jackpots",
+      "type": "jackpot",
+      "symbolId": "coin",
+      "tiers": [
+        {
+          "id": "grand",
+          "label": "GRAND",
+          "count": 5,
+          "multiplier": 1000
+        },
+        {
+          "id": "major",
+          "label": "MAJOR",
+          "count": 4,
+          "multiplier": 100
+        }
+      ]
+    }
+  ],
+  "winTiers": [
+    {
+      "id": "no_tier",
+      "label": "Win",
+      "minTotalBetMultiplier": 0
+    },
+    {
+      "id": "small",
+      "label": "Nice Win",
+      "minTotalBetMultiplier": 2,
+      "sound": "assets/sounds/win_small.mp3"
+    },
+    {
+      "id": "big",
+      "label": "Big Win",
+      "minTotalBetMultiplier": 15,
+      "sound": "assets/sounds/win_big.mp3"
+    },
+    {
+      "id": "mega",
+      "label": "Mega Win",
+      "minTotalBetMultiplier": 50,
+      "sound": "assets/sounds/win_mega.mp3"
+    }
+  ],
+  "presentation": {
+    "background": {
+      "image": "assets/backgrounds/background-trex.webp"
+    },
+    "screen": [
+      {
+        "role": "jackpots",
+        "rect": {
+          "x": 172,
+          "y": 646,
+          "width": 1816,
+          "height": 300
+        },
+        "image": "assets/screen/meters-plaque.webp"
+      },
+      {
+        "role": "logo",
+        "rect": {
+          "x": 417,
+          "y": 96,
+          "width": 1326,
+          "height": 520
+        },
+        "image": "assets/screen/logo.webp"
+      },
+      {
+        "role": "callout",
+        "rect": {
+          "x": 151,
+          "y": 1858,
+          "width": 1858,
+          "height": 143
+        },
+        "image": "assets/screen/callout-bar.webp"
+      },
+      {
+        "role": "reels",
+        "rect": {
+          "x": 48,
+          "y": 2055,
+          "width": 2064,
+          "height": 1248
+        }
+      }
+    ],
+    "overlays": [
+      {
+        "role": "bet_chip",
+        "rect": {
+          "x": 199,
+          "y": 783,
+          "width": 345,
+          "height": 163
+        }
+      },
+      {
+        "role": "denomination_chip",
+        "rect": {
+          "x": 1616,
+          "y": 783,
+          "width": 345,
+          "height": 163
+        }
+      },
+      {
+        "role": "free_spins_badge",
+        "rect": {
+          "x": 1513,
+          "y": 1578,
+          "width": 537,
+          "height": 226
+        }
+      }
+    ],
+    "reelSpin": {
+      "mode": "symbol_scroll",
+      "spinDurationMs": 900,
+      "reelStopStaggerMs": 350
+    },
+    "attract": {
+      "enabled": true,
+      "titleCard": "assets/attract/title-card.webp",
+      "video": "assets/attract/dino-run-attract.mp4"
+    },
+    "reelLights": {
+      "enabled": true
+    }
+  },
+  "bet": {
+    "currency": "USD",
+    "denominationsMinorUnits": [
+      1,
+      5,
+      10,
+      25,
+      100
+    ],
+    "defaultDenominationMinorUnits": 1,
+    "betLevels": [
+      {
+        "id": "level_1",
+        "totalBetCredits": 20,
+        "label": "1x"
+      },
+      {
+        "id": "level_2",
+        "totalBetCredits": 40,
+        "label": "2x"
+      },
+      {
+        "id": "level_3",
+        "totalBetCredits": 100,
+        "label": "5x"
+      },
+      {
+        "id": "level_4",
+        "totalBetCredits": 200,
+        "label": "10x"
+      }
+    ],
+    "defaultBetLevelId": "level_1",
+    "minTotalBetCredits": 20,
+    "maxTotalBetCredits": 200
+  },
+  "audio": {
+    "spin": "assets/sounds/spin.mp3",
+    "reelStop": "assets/sounds/reelstop-2.mp3",
+    "buttonPress": "assets/sounds/button.mp3",
+    "bonusTrigger": "assets/sounds/bonus_trigger.mp3",
+    "idleLoop": "assets/audio/idle_loop.ogg"
+  },
+  "rng": {
+    "model": "independent_uniform_per_reel",
+    "stopIndexSemantics": "top_row",
+    "wrap": true
+  },
+  "feels": {
+    "defaultFeelId": "casino",
+    "options": [
+      {
+        "id": "steady",
+        "name": "Wins often",
+        "entries": [
+          {
+            "symbolId": "amber-fossil",
+            "payouts": {
+              "3": 13.5,
+              "4": 121.5,
+              "5": 1222.5
+            }
+          },
+          {
+            "symbolId": "trex",
+            "payouts": {
+              "3": 9.5,
+              "4": 244.5,
+              "5": 3058
+            }
+          },
+          {
+            "symbolId": "triceratops",
+            "payouts": {
+              "3": 0.5,
+              "4": 23.5,
+              "5": 77.5
+            }
+          },
+          {
+            "symbolId": "stegosaurus",
+            "payouts": {
+              "3": 1,
+              "4": 12,
+              "5": 46
+            }
+          },
+          {
+            "symbolId": "raptor",
+            "payouts": {
+              "3": 0.5,
+              "4": 7,
+              "5": 33.5
+            }
+          },
+          {
+            "symbolId": "pterodactyl",
+            "payouts": {
+              "3": 1,
+              "4": 3,
+              "5": 25
+            }
+          },
+          {
+            "symbolId": "volcano",
+            "payouts": {
+              "3": 1.1,
+              "4": 7.25,
+              "5": 34.3
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 8000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.4534,
+          "rtp": 0.9606
+        }
+      },
+      {
+        "id": "casino",
+        "name": "Like a casino",
+        "entries": [
+          {
+            "symbolId": "amber-fossil",
+            "payouts": {
+              "3": 13.5,
+              "4": 124,
+              "5": 1246
+            }
+          },
+          {
+            "symbolId": "trex",
+            "payouts": {
+              "3": 10,
+              "4": 249,
+              "5": 3118.5
+            }
+          },
+          {
+            "symbolId": "triceratops",
+            "payouts": {
+              "4": 24,
+              "5": 79
+            }
+          },
+          {
+            "symbolId": "stegosaurus",
+            "payouts": {
+              "4": 12,
+              "5": 46.5
+            }
+          },
+          {
+            "symbolId": "raptor",
+            "payouts": {
+              "3": 0.5,
+              "4": 7,
+              "5": 34.5
+            }
+          },
+          {
+            "symbolId": "pterodactyl",
+            "payouts": {
+              "3": 1.5,
+              "4": 3,
+              "5": 25.5
+            }
+          },
+          {
+            "symbolId": "volcano",
+            "payouts": {
+              "3": 1.15,
+              "4": 7.45,
+              "5": 35
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 8000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.3064,
+          "rtp": 0.9606
+        }
+      },
+      {
+        "id": "rare",
+        "name": "Rare and big",
+        "entries": [
+          {
+            "symbolId": "amber-fossil",
+            "payouts": {
+              "3": 13.5,
+              "4": 125,
+              "5": 1255.5
+            }
+          },
+          {
+            "symbolId": "trex",
+            "payouts": {
+              "3": 10,
+              "4": 251,
+              "5": 3141
+            }
+          },
+          {
+            "symbolId": "triceratops",
+            "payouts": {
+              "4": 24,
+              "5": 79.5
+            }
+          },
+          {
+            "symbolId": "stegosaurus",
+            "payouts": {
+              "4": 12,
+              "5": 47
+            }
+          },
+          {
+            "symbolId": "raptor",
+            "payouts": {
+              "4": 7,
+              "5": 34.5
+            }
+          },
+          {
+            "symbolId": "pterodactyl",
+            "payouts": {
+              "3": 1.5,
+              "4": 3.5,
+              "5": 25.5
+            }
+          },
+          {
+            "symbolId": "volcano",
+            "payouts": {
+              "3": 1.15,
+              "4": 7.45,
+              "5": 35.25
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 8000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.2401,
+          "rtp": 0.9606
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1026 @@
+{
+  "schemaVersion": "1.9.0",
+  "gameId": "midnight-manor",
+  "metadata": {
+    "title": "Midnight Manor",
+    "version": "0.1.0",
+    "description": "Step inside a haunted gothic mansion at the stroke of midnight, where a vampire, a raven, a flickering candelabra, a grinning skull and an old key spin across five reels. A wandering ghost is wild, three crystal balls conjure 11 free spins with every win doubled, and enough haunted coins win the GRAND or MAJOR jackpot.",
+    "targetRtp": 0.96,
+    "volatility": "medium",
+    "createdUtc": "2026-09-19T12:02:03Z",
+    "tags": [
+      "haunted",
+      "gothic",
+      "horror",
+      "vampire",
+      "ghost"
+    ]
+  },
+  "display": {
+    "canvas": {
+      "width": 2160,
+      "height": 3840
+    },
+    "orientation": "portrait",
+    "backgroundColor": "#141824",
+    "safeAreaInsets": {
+      "top": 96,
+      "right": 48,
+      "bottom": 160,
+      "left": 48
+    }
+  },
+  "symbols": [
+    {
+      "id": "vampire",
+      "name": "Vampire",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/vampire.webp"
+      },
+      "sounds": {
+        "win": "assets/sounds/vampire_win.mp3"
+      }
+    },
+    {
+      "id": "raven",
+      "name": "Raven",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/raven.webp"
+      },
+      "sounds": {
+        "win": "assets/sounds/raven_win.mp3"
+      }
+    },
+    {
+      "id": "candelabra",
+      "name": "Candelabra",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/candelabra.webp"
+      }
+    },
+    {
+      "id": "skull",
+      "name": "Skull",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/skull.webp"
+      }
+    },
+    {
+      "id": "key",
+      "name": "Old Key",
+      "kind": "standard",
+      "art": {
+        "static": "assets/symbols/key.webp"
+      }
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "kind": "wild",
+      "art": {
+        "static": "assets/symbols/ghost.webp"
+      },
+      "wild": {
+        "substitutesFor": "all_standard",
+        "multiplier": 2,
+        "paysOwnCombination": true
+      }
+    },
+    {
+      "id": "crystal_ball",
+      "name": "Crystal Ball",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/crystal_ball.webp"
+      },
+      "sounds": {
+        "land": "assets/sounds/crystal_land.mp3"
+      },
+      "scatter": {
+        "paysAnywhere": true,
+        "payoutBasis": "total_bet",
+        "maxPerReel": 1
+      }
+    },
+    {
+      "id": "coin",
+      "name": "Coin",
+      "kind": "scatter",
+      "art": {
+        "static": "assets/symbols/coin.webp"
+      },
+      "scatter": {}
+    }
+  ],
+  "grid": {
+    "reelCount": 5,
+    "rows": 3
+  },
+  "reelSets": {
+    "base": [
+      [
+        "vampire",
+        "skull",
+        "candelabra",
+        "key",
+        "raven",
+        "crystal_ball",
+        "skull",
+        "vampire",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "key",
+        "candelabra",
+        "raven",
+        "skull",
+        "key",
+        "candelabra",
+        "vampire",
+        "coin",
+        "ghost",
+        "skull",
+        "raven",
+        "key",
+        "crystal_ball",
+        "candelabra",
+        "skull",
+        "key",
+        "vampire",
+        "raven",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "key"
+      ],
+      [
+        "raven",
+        "key",
+        "vampire",
+        "skull",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "candelabra",
+        "crystal_ball",
+        "key",
+        "raven",
+        "skull",
+        "vampire",
+        "candelabra",
+        "key",
+        "ghost",
+        "skull",
+        "raven",
+        "coin",
+        "key",
+        "candelabra",
+        "vampire",
+        "skull",
+        "raven",
+        "key",
+        "candelabra",
+        "skull",
+        "raven",
+        "crystal_ball",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "vampire",
+        "key",
+        "ghost",
+        "skull",
+        "candelabra"
+      ],
+      [
+        "candelabra",
+        "raven",
+        "key",
+        "ghost",
+        "skull",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "vampire",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "crystal_ball",
+        "key",
+        "candelabra",
+        "vampire",
+        "skull",
+        "coin",
+        "raven",
+        "key",
+        "ghost",
+        "candelabra",
+        "skull",
+        "raven",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "vampire",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "crystal_ball",
+        "key",
+        "vampire",
+        "skull"
+      ],
+      [
+        "skull",
+        "candelabra",
+        "crystal_ball",
+        "raven",
+        "key",
+        "skull",
+        "candelabra",
+        "ghost",
+        "key",
+        "raven",
+        "skull",
+        "vampire",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "key",
+        "candelabra",
+        "vampire",
+        "coin",
+        "skull",
+        "raven",
+        "crystal_ball",
+        "key",
+        "candelabra",
+        "skull",
+        "vampire",
+        "raven",
+        "ghost",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "key",
+        "vampire"
+      ],
+      [
+        "key",
+        "skull",
+        "candelabra",
+        "key",
+        "raven",
+        "skull",
+        "vampire",
+        "crystal_ball",
+        "key",
+        "candelabra",
+        "raven",
+        "skull",
+        "key",
+        "candelabra",
+        "skull",
+        "raven",
+        "key",
+        "candelabra",
+        "vampire",
+        "coin",
+        "skull",
+        "key",
+        "raven",
+        "candelabra",
+        "skull",
+        "key",
+        "vampire",
+        "raven",
+        "ghost",
+        "crystal_ball",
+        "key",
+        "skull",
+        "candelabra",
+        "raven",
+        "vampire",
+        "key",
+        "skull",
+        "candelabra",
+        "raven"
+      ]
+    ]
+  },
+  "winMode": {
+    "type": "lines",
+    "direction": "left_to_right"
+  },
+  "paylines": [
+    {
+      "id": "line_01",
+      "name": "Middle",
+      "rows": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "color": "#ff2f92"
+    },
+    {
+      "id": "line_02",
+      "name": "Top",
+      "rows": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "color": "#2fd0ff"
+    },
+    {
+      "id": "line_03",
+      "name": "Bottom",
+      "rows": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "color": "#7cff2f"
+    },
+    {
+      "id": "line_04",
+      "name": "V",
+      "rows": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "color": "#ffb62f"
+    },
+    {
+      "id": "line_05",
+      "name": "Caret",
+      "rows": [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "color": "#b62fff"
+    },
+    {
+      "id": "line_06",
+      "name": "Descend",
+      "rows": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "color": "#ff5c2f"
+    },
+    {
+      "id": "line_07",
+      "name": "Ascend",
+      "rows": [
+        2,
+        2,
+        1,
+        0,
+        0
+      ],
+      "color": "#2fffc4"
+    },
+    {
+      "id": "line_08",
+      "name": "Dip",
+      "rows": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "color": "#ff2f2f"
+    },
+    {
+      "id": "line_09",
+      "name": "Rise",
+      "rows": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "color": "#2f6bff"
+    },
+    {
+      "id": "line_10",
+      "name": "Arch Top",
+      "rows": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "color": "#c9ff2f"
+    },
+    {
+      "id": "line_11",
+      "name": "Arch Low",
+      "rows": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "color": "#ff2fd0"
+    },
+    {
+      "id": "line_12",
+      "name": "Zig",
+      "rows": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "color": "#2fffe9"
+    },
+    {
+      "id": "line_13",
+      "name": "Zag",
+      "rows": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "color": "#ff8f2f"
+    },
+    {
+      "id": "line_14",
+      "name": "Notch Top",
+      "rows": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "color": "#8f2fff"
+    },
+    {
+      "id": "line_15",
+      "name": "Notch Low",
+      "rows": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "color": "#2fff6b"
+    },
+    {
+      "id": "line_16",
+      "name": "Sag",
+      "rows": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "color": "#ffd82f"
+    },
+    {
+      "id": "line_17",
+      "name": "Crest",
+      "rows": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "color": "#2f9dff"
+    },
+    {
+      "id": "line_18",
+      "name": "Wave Top",
+      "rows": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "color": "#ff2f6b"
+    },
+    {
+      "id": "line_19",
+      "name": "Wave Low",
+      "rows": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "color": "#6bff2f"
+    },
+    {
+      "id": "line_20",
+      "name": "Split",
+      "rows": [
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "color": "#d0d0ff"
+    }
+  ],
+  "paytable": {
+    "payoutBasis": "bet_per_line",
+    "minMatch": 3,
+    "entries": [
+      {
+        "symbolId": "ghost",
+        "payouts": {
+          "3": 6,
+          "4": 23,
+          "5": 122
+        }
+      },
+      {
+        "symbolId": "vampire",
+        "payouts": {
+          "3": 5,
+          "4": 15,
+          "5": 101
+        }
+      },
+      {
+        "symbolId": "raven",
+        "payouts": {
+          "4": 22,
+          "5": 72
+        }
+      },
+      {
+        "symbolId": "candelabra",
+        "payouts": {
+          "4": 11,
+          "5": 43
+        }
+      },
+      {
+        "symbolId": "skull",
+        "payouts": {
+          "4": 2,
+          "5": 35
+        }
+      },
+      {
+        "symbolId": "key",
+        "payouts": {
+          "4": 3,
+          "5": 23
+        }
+      },
+      {
+        "symbolId": "crystal_ball",
+        "payouts": {
+          "3": 2.35,
+          "4": 10,
+          "5": 49.4
+        }
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "free_spins",
+      "type": "free_spins",
+      "trigger": {
+        "symbolId": "crystal_ball",
+        "awards": {
+          "3": 11
+        }
+      },
+      "winMultiplier": 2
+    },
+    {
+      "id": "jackpots",
+      "type": "jackpot",
+      "symbolId": "coin",
+      "tiers": [
+        {
+          "id": "grand",
+          "label": "GRAND",
+          "count": 5,
+          "multiplier": 1000
+        },
+        {
+          "id": "major",
+          "label": "MAJOR",
+          "count": 4,
+          "multiplier": 100
+        }
+      ]
+    }
+  ],
+  "winTiers": [
+    {
+      "id": "no_tier",
+      "label": "Win",
+      "minTotalBetMultiplier": 0
+    },
+    {
+      "id": "small",
+      "label": "Nice Win",
+      "minTotalBetMultiplier": 2,
+      "sound": "assets/sounds/win_small.mp3"
+    },
+    {
+      "id": "big",
+      "label": "Big Win",
+      "minTotalBetMultiplier": 15,
+      "sound": "assets/sounds/win_big.mp3"
+    },
+    {
+      "id": "mega",
+      "label": "Mega Win",
+      "minTotalBetMultiplier": 50,
+      "sound": "assets/sounds/win_mega.mp3"
+    }
+  ],
+  "presentation": {
+    "background": {
+      "image": "assets/backgrounds/manor-dracula-hall.webp"
+    },
+    "screen": [
+      {
+        "role": "jackpots",
+        "rect": {
+          "x": 172,
+          "y": 840,
+          "width": 1816,
+          "height": 200
+        }
+      },
+      {
+        "role": "logo",
+        "rect": {
+          "x": 540,
+          "y": 70,
+          "width": 1080,
+          "height": 744
+        },
+        "image": "assets/branding/logo-transparent.webp"
+      },
+      {
+        "role": "callout",
+        "rect": {
+          "x": 151,
+          "y": 1072,
+          "width": 1858,
+          "height": 120
+        }
+      },
+      {
+        "role": "reels",
+        "rect": {
+          "x": 48,
+          "y": 2150,
+          "width": 2064,
+          "height": 1190
+        }
+      }
+    ],
+    "overlays": [
+      {
+        "role": "bet_chip",
+        "rect": {
+          "x": 172,
+          "y": 1225,
+          "width": 345,
+          "height": 150
+        }
+      },
+      {
+        "role": "denomination_chip",
+        "rect": {
+          "x": 1643,
+          "y": 1225,
+          "width": 345,
+          "height": 150
+        }
+      },
+      {
+        "role": "free_spins_badge",
+        "rect": {
+          "x": 1540,
+          "y": 1520,
+          "width": 480,
+          "height": 200
+        }
+      }
+    ],
+    "reelSpin": {
+      "mode": "symbol_scroll",
+      "spinDurationMs": 900,
+      "reelStopStaggerMs": 350
+    },
+    "attract": {
+      "enabled": true,
+      "titleCard": "assets/attract/title-card.webp",
+      "video": "assets/attract/midnight-manor-attract.mp4"
+    },
+    "reelLights": {
+      "enabled": true
+    }
+  },
+  "bet": {
+    "currency": "USD",
+    "denominationsMinorUnits": [
+      1,
+      5,
+      10,
+      25,
+      100
+    ],
+    "defaultDenominationMinorUnits": 1,
+    "betLevels": [
+      {
+        "id": "level_1",
+        "totalBetCredits": 20,
+        "label": "1x"
+      },
+      {
+        "id": "level_2",
+        "totalBetCredits": 40,
+        "label": "2x"
+      },
+      {
+        "id": "level_3",
+        "totalBetCredits": 100,
+        "label": "5x"
+      },
+      {
+        "id": "level_4",
+        "totalBetCredits": 200,
+        "label": "10x"
+      }
+    ],
+    "defaultBetLevelId": "level_1",
+    "minTotalBetCredits": 20,
+    "maxTotalBetCredits": 200
+  },
+  "audio": {
+    "spin": "assets/sounds/spin.mp3",
+    "reelStop": "assets/sounds/reelstop-2.mp3",
+    "buttonPress": "assets/sounds/button.mp3",
+    "bonusTrigger": "assets/sounds/bonus_trigger.mp3",
+    "bonusLoop": "assets/sounds/bonus_loop.mp3",
+    "idleLoop": "assets/sounds/idle_loop.ogg"
+  },
+  "rng": {
+    "model": "independent_uniform_per_reel",
+    "stopIndexSemantics": "top_row",
+    "wrap": true
+  },
+  "feels": {
+    "defaultFeelId": "casino",
+    "options": [
+      {
+        "id": "steady",
+        "name": "Wins often",
+        "entries": [
+          {
+            "symbolId": "ghost",
+            "payouts": {
+              "3": 6,
+              "4": 21,
+              "5": 112
+            }
+          },
+          {
+            "symbolId": "vampire",
+            "payouts": {
+              "3": 5,
+              "4": 13,
+              "5": 92
+            }
+          },
+          {
+            "symbolId": "raven",
+            "payouts": {
+              "3": 1,
+              "4": 19,
+              "5": 67
+            }
+          },
+          {
+            "symbolId": "candelabra",
+            "payouts": {
+              "3": 1,
+              "4": 10,
+              "5": 39
+            }
+          },
+          {
+            "symbolId": "skull",
+            "payouts": {
+              "3": 1,
+              "4": 2,
+              "5": 32
+            }
+          },
+          {
+            "symbolId": "key",
+            "payouts": {
+              "4": 3,
+              "5": 22
+            }
+          },
+          {
+            "symbolId": "crystal_ball",
+            "payouts": {
+              "3": 2.2,
+              "4": 9.2,
+              "5": 45.45
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 2000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.559,
+          "rtp": 0.9593
+        }
+      },
+      {
+        "id": "casino",
+        "name": "Like a casino",
+        "entries": [
+          {
+            "symbolId": "ghost",
+            "payouts": {
+              "3": 6,
+              "4": 23,
+              "5": 122
+            }
+          },
+          {
+            "symbolId": "vampire",
+            "payouts": {
+              "3": 5,
+              "4": 15,
+              "5": 101
+            }
+          },
+          {
+            "symbolId": "raven",
+            "payouts": {
+              "4": 22,
+              "5": 72
+            }
+          },
+          {
+            "symbolId": "candelabra",
+            "payouts": {
+              "4": 11,
+              "5": 43
+            }
+          },
+          {
+            "symbolId": "skull",
+            "payouts": {
+              "4": 2,
+              "5": 35
+            }
+          },
+          {
+            "symbolId": "key",
+            "payouts": {
+              "4": 3,
+              "5": 23
+            }
+          },
+          {
+            "symbolId": "crystal_ball",
+            "payouts": {
+              "3": 2.35,
+              "4": 10,
+              "5": 49.4
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 2000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.2805,
+          "rtp": 0.9598
+        }
+      },
+      {
+        "id": "rare",
+        "name": "Rare and big",
+        "entries": [
+          {
+            "symbolId": "ghost",
+            "payouts": {
+              "3": 6,
+              "4": 24,
+              "5": 128
+            }
+          },
+          {
+            "symbolId": "vampire",
+            "payouts": {
+              "3": 6,
+              "4": 15,
+              "5": 105
+            }
+          },
+          {
+            "symbolId": "raven",
+            "payouts": {
+              "4": 23,
+              "5": 75
+            }
+          },
+          {
+            "symbolId": "candelabra",
+            "payouts": {
+              "4": 11,
+              "5": 45
+            }
+          },
+          {
+            "symbolId": "skull",
+            "payouts": {
+              "5": 37
+            }
+          },
+          {
+            "symbolId": "key",
+            "payouts": {
+              "5": 24
+            }
+          },
+          {
+            "symbolId": "crystal_ball",
+            "payouts": {
+              "3": 2.55,
+              "4": 10.45,
+              "5": 51.75
+            }
+          }
+        ],
+        "measured": {
+          "rounds": 2000000,
+          "seed": "builder-feel",
+          "hitFrequency": 0.196,
+          "rtp": 0.9592
+        }
+      }
+    ]
+  }
+}

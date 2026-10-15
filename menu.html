@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--
+      The game menu (ADR-0060). Laid out in the cabinet's design pixels and
+      scaled as one block, like #ui in index.html. Nothing on it is pressed:
+      the arrow keys choose and the space bar plays (ADR-0039).
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'"
+    />
+    <title>Slot Cabinet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body class="menu-page">
+    <main id="menu" hidden>
+      <h1 class="menu-title">Choose a game</h1>
+      <section id="menu-cards" class="menu-cards"></section>
+      <p id="menu-notice" class="menu-notice" hidden></p>
+      <p id="menu-keys" class="menu-keys"></p>
+    </main>
+    <pre id="fatal" hidden></pre>
+    <script type="module" src="menu.js"></script>
+  </body>
+</html>
